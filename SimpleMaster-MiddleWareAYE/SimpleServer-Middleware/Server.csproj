@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConsoleGame\**" />
+    <Compile Remove="GNGame\**" />
+    <Compile Remove="Testing\**" />
+    <Compile Remove="TheGame\**" />
+    <Compile Remove="UnitTestProject1\**" />
+    <EmbeddedResource Remove="ConsoleGame\**" />
+    <EmbeddedResource Remove="GNGame\**" />
+    <EmbeddedResource Remove="Testing\**" />
+    <EmbeddedResource Remove="TheGame\**" />
+    <EmbeddedResource Remove="UnitTestProject1\**" />
+    <None Remove="ConsoleGame\**" />
+    <None Remove="GNGame\**" />
+    <None Remove="Testing\**" />
+    <None Remove="TheGame\**" />
+    <None Remove="UnitTestProject1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="GNGame\GNGame.csproj" />
+    <ProjectReference Include="TheGame\TheGame.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Files\b.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\a.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Game.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
